@@ -44,7 +44,7 @@ export const RegisterPage = () => {
           />
           <textarea
             type="text"
-            className=" rounded-lg border-0 py-2 px-4 ring-1 transition focus:scale-105 focus:ring-2 focus:ring-accent-red dark:bg-inactive-dark dark:text-off-white dark:ring-secondary-gray "
+            className="resize-none rounded-lg border-0 py-2 px-4 ring-1 transition focus:scale-105 focus:ring-2 focus:ring-accent-red dark:bg-inactive-dark dark:text-off-white dark:ring-secondary-gray "
             placeholder="Address"
           />
           <div className="flex space-x-4">
