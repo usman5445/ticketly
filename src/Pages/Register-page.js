@@ -6,7 +6,7 @@ import { ThemeBtn } from "../Components/ThemeBtn";
 export const RegisterPage = () => {
   const navigate = useNavigate();
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center  bg-off-white dark:bg-off-dark">
+    <div className="relative flex h-screen w-screen items-center justify-center bg-off-white transition-all  duration-500 dark:bg-off-dark">
       <ThemeBtn classes="absolute top-4 right-4 " />
       <div className="absolute flex h-full w-full flex-col items-center justify-center overflow-hidden opacity-30 ">
         <GiZebraShield className=" animate-blurryBg   text-[15rem] text-secondary-gray blur-sm filter dark:text-light-gray" />
