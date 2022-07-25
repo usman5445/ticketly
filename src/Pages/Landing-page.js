@@ -10,43 +10,43 @@ export const LandingPage = () => {
     navigate("/login");
   }
   return (
-    <div className="px-8 text-3xl md:text-5xl h-full grid grid-rows-6 relative">
-      <div className="absolute w-screen h-screen opacity-30  overflow-hidden">
-        <GiTicket className="absolute dark:text-inactive-white text-[15rem] animate-blurryBg  filter blur-sm text-secondary-gray left-4" />
-        <GiTicket className="absolute dark:text-inactive-white animation-delay-6000 text-[15rem] animate-blurryBg rotate-90 filter blur-sm text-secondary-gray bottom-4 " />
-        <GiTicket className="absolute dark:text-inactive-white animation-delay-4000 text-[15rem] animate-blurryBg rotate-6 filter blur-sm text-secondary-gray right-4 bottom-4" />
-        <GiTicket className="absolute dark:text-inactive-white animation-delay-2000 text-[20rem] animate-blurryBg rotate-180 filter blur-sm text-secondary-gray top-32 right-1/3" />
-        <GiTicket className="absolute dark:text-inactive-white animation-delay-6000 text-[15rem] animate-blurryBg rotate-45 filter blur-sm text-secondary-gray right-4  " />
+    <div className="relative grid h-full grid-rows-6 px-8 text-3xl md:text-5xl">
+      <div className="absolute h-screen w-screen overflow-hidden  opacity-30">
+        <GiTicket className="absolute left-4 animate-blurryBg text-[15rem]  text-secondary-gray blur-sm filter dark:text-inactive-white" />
+        <GiTicket className="animation-delay-6000 absolute bottom-4 rotate-90 animate-blurryBg text-[15rem] text-secondary-gray blur-sm filter dark:text-inactive-white " />
+        <GiTicket className="animation-delay-4000 absolute right-4 bottom-4 rotate-6 animate-blurryBg text-[15rem] text-secondary-gray blur-sm filter dark:text-inactive-white" />
+        <GiTicket className="animation-delay-2000 absolute top-32 right-1/3 rotate-180 animate-blurryBg text-[20rem] text-secondary-gray blur-sm filter dark:text-inactive-white" />
+        <GiTicket className="animation-delay-6000 absolute right-4 rotate-45 animate-blurryBg text-[15rem] text-secondary-gray blur-sm filter dark:text-inactive-white  " />
       </div>
-      <div className="flex flex-row items-center z-10 w-full h-fit py-4 justify-between  ">
-        <h4 className="text-primary-gray dark:text-primary-white font-montserrat-bold ">
+      <div className="z-10 flex h-fit w-full flex-row items-center justify-between py-4  ">
+        <h4 className="font-montserrat-bold text-primary-gray dark:text-primary-white ">
           Ticketly<span className="text-accent-red">.</span>
         </h4>
         <ThemeBtn />
       </div>
-      <div className="grid grid-cols-12 items-center row-span-5">
-        <div className="md:col-span-6 col-span-12 relative ">
-          <h1 className="text-secondary-gray text-2xl md:text-4xl font-extralight">
+      <div className="row-span-5 grid grid-cols-12 items-center">
+        <div className="relative col-span-12 md:col-span-6 ">
+          <h1 className="text-2xl font-extralight text-secondary-gray md:text-4xl">
             Buying
           </h1>
-          <h1 className="text-3xl md:text-6xl pt-4 font-bold text-primary-gray dark:text-primary-white ">
+          <h1 className="pt-4 text-3xl font-bold text-primary-gray dark:text-primary-white md:text-6xl ">
             <span className="text-accent-red">Movie</span> Tickets{" "}
             <FaTicketAlt className="inline" />
           </h1>
-          <h1 className="text-secondary-gray text-2xl md:text-4xl font-extralight">
+          <h1 className="text-2xl font-extralight text-secondary-gray md:text-4xl">
             Made easy...
           </h1>
-          <p className="dark:text-light-gray text-primary-gray text-base md:text-lg">
+          <p className="text-base text-primary-gray dark:text-light-gray md:text-lg">
             Book your favorite movie tickets from comfort of your home!
           </p>
           <button
             onClick={handleClick}
-            className="text-xl md:mt-8 md:text-2xl mt-4 text-primary-white bg-accent-red rounded-2xl p-2 shadow-md  hover:scale-110 shadow-accent-red hover:shadow-2xl hover:shadow-accent-red transition-all"
+            className="mt-4 rounded-2xl bg-accent-red p-2 text-xl text-primary-white shadow-md shadow-accent-red transition-all  hover:scale-110 hover:shadow-2xl hover:shadow-accent-red md:mt-8 md:text-2xl"
           >
             Book Now
           </button>
         </div>
-        <div className="md:col-span-5 col-span-12">
+        <div className="col-span-12 md:col-span-5">
           <SvgHomeCinema />
         </div>
       </div>

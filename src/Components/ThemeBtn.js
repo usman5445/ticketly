@@ -10,7 +10,7 @@ export const ThemeBtn = () => {
 
   return (
     <button
-      className="text-primary-gray dark:text-primary-white text-2xl lg:text-3xl  "
+      className="text-2xl text-primary-gray dark:text-primary-white lg:text-3xl  "
       onClick={handleSwitch}
     >
       {!isDark ? <FaSun /> : <FaMoon />}
