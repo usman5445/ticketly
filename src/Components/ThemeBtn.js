@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-export const ThemeBtn = () => {
+export const ThemeBtn = ({ classes }) => {
   const [isDark, setIsDark] = useState(false);
   function handleSwitch() {
     document.body.classList.toggle("dark");
@@ -10,7 +10,7 @@ export const ThemeBtn = () => {
 
   return (
     <button
-      className="text-2xl text-primary-gray dark:text-primary-white lg:text-3xl  "
+      className={`z-10 text-2xl text-primary-gray drop-shadow-xl dark:text-primary-white lg:text-3xl ${classes}`}
       onClick={handleSwitch}
     >
       {!isDark ? <FaSun /> : <FaMoon />}
