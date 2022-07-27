@@ -31,6 +31,7 @@ export const LoginPage = () => {
             isDanger: true,
             massage: resp.data.message,
           });
+          setIsLoading(false);
           return;
         }
         localStorage.setItem("user", JSON.stringify(resp.data));
