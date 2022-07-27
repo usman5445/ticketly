@@ -7,7 +7,12 @@ import { useNavigate } from "react-router-dom";
 export const LandingPage = () => {
   const navigate = useNavigate();
   function handleClick() {
-    navigate("/login");
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user?.userType) {
+      navigate(`/${user?.userType.toLowerCase()}`);
+    } else {
+      navigate("/login");
+    }
   }
   return (
     <div className="relative grid h-full grid-rows-6 px-8 text-3xl md:text-5xl">

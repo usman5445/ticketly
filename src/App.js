@@ -3,7 +3,10 @@ import "./App.css";
 import { LandingPage } from "./Pages/Landing-page";
 import { LoginPage } from "./Pages/Login-page";
 import { RegisterPage } from "./Pages/Register-page";
-
+import { ProtectedRoute } from "./Utils/ProtectedRoute";
+import { AdminPage } from "./Pages/Admin-page";
+import { CustomerPage } from "./Pages/Customer-page";
+import { TheatreOwnerPage } from "./Pages/TheatreOwner-page";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +15,15 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route element={<ProtectedRoute ROLE={"ADMIN"} />}>
+            <Route path="/admin" element={<AdminPage />} />
+          </Route>
+          <Route element={<ProtectedRoute ROLE={"CUSTOMER"} />}>
+            <Route path="/customer" element={<CustomerPage />} />
+          </Route>
+          <Route element={<ProtectedRoute ROLE={"THEATRE_OWNER"} />}>
+            <Route path="/theatre_owner" element={<TheatreOwnerPage />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
