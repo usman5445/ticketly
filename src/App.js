@@ -6,7 +6,7 @@ import { RegisterPage } from "./Pages/Register-page";
 import { ProtectedRoute } from "./Utils/ProtectedRoute";
 import { AdminPage } from "./Pages/Admin-page";
 import { CustomerPage } from "./Pages/Customer-page";
-import { TheatreOwnerPage } from "./Pages/TheatreOwner-page";
+import { ClientPage } from "./Pages/Client-page";
 function App() {
   return (
     <BrowserRouter>
@@ -21,8 +21,8 @@ function App() {
           <Route element={<ProtectedRoute ROLE={"CUSTOMER"} />}>
             <Route path="/customer" element={<CustomerPage />} />
           </Route>
-          <Route element={<ProtectedRoute ROLE={"THEATRE_OWNER"} />}>
-            <Route path="/theatre_owner" element={<TheatreOwnerPage />} />
+          <Route element={<ProtectedRoute ROLE={"CLIENT"} />}>
+            <Route path="/client" element={<ClientPage />} />
           </Route>
         </Routes>
       </div>

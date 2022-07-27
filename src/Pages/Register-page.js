@@ -127,7 +127,7 @@ export const RegisterPage = () => {
               defaultValue={"CUSTOMER"}
             >
               <option value="ADMIN">Admin</option>
-              <option value="THEATRE_OWNER">Theatre Owner</option>
+              <option value="CLIENT">Client</option>
               <option value="CUSTOMER">Customer</option>
             </select>
           </div>
