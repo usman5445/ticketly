@@ -25,6 +25,14 @@ export const LoginPage = () => {
     };
     signIn(data)
       .then((resp) => {
+        if (resp.data.message) {
+          setAlertData({
+            isVisible: true,
+            isDanger: true,
+            massage: resp.data.message,
+          });
+          return;
+        }
         localStorage.setItem("user", JSON.stringify(resp.data));
         setIsLoading(false);
         setAlertData({ isVisible: true, massage: "Login Sucessfull!" });
