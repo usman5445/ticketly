@@ -4,7 +4,8 @@ import { getAllMovies } from "../Apis/Movie-apis";
 export const getAllMoviesThunk = createAsyncThunk(
   "MovieSlice/getAllMovies",
   async () => {
-    return getAllMovies();
+    const data = await getAllMovies();
+    return data.data;
   }
 );
 
@@ -17,7 +18,7 @@ export const MovieSlice = createSlice({
     });
     builder.addCase(getAllMoviesThunk.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.data = action.payload.data;
+      state.data = action.payload;
       state.error = "";
     });
     builder.addCase(getAllMoviesThunk.rejected, (state, action) => {

@@ -11,8 +11,8 @@ import { Provider } from "react-redux";
 import { store } from "./Redux/Store";
 function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <div className="App h-screen w-screen bg-off-white font-montserrat-regular transition-all duration-500 dark:bg-off-dark">
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -29,8 +29,8 @@ function App() {
             </Route>
           </Routes>
         </div>
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   );
 }
 

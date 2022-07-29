@@ -25,7 +25,7 @@ function SearchBar({ className }) {
       </div>
       <div
         ref={searchResultRef}
-        className="top-28 z-20 my-4 hidden h-full w-full  justify-self-center rounded-3xl shadow-xl filter backdrop-blur-sm  backdrop-brightness-90 md:absolute md:top-20 md:h-4/5 md:w-11/12 md:w-2/4  "
+        className="top-28 z-20 my-4 hidden h-full w-full  justify-self-center rounded-3xl shadow-xl filter backdrop-blur-sm  backdrop-brightness-90 md:absolute md:top-20 md:h-fit  md:w-2/4  "
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet
         suscipit et error, sit porro non quibusdam quisquam dicta voluptates
