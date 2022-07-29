@@ -18,9 +18,9 @@ function App() {
           <Route element={<ProtectedRoute ROLE={"ADMIN"} />}>
             <Route path="/admin" element={<AdminPage />} />
           </Route>
-          <Route element={<ProtectedRoute ROLE={"CUSTOMER"} />}>
-            <Route path="/customer" element={<CustomerPage />} />
-          </Route>
+          {/* <Route element={<ProtectedRoute ROLE={"CUSTOMER"} />}> */}
+          <Route path="/customer" element={<CustomerPage />} />
+          {/* </Route> */}
           <Route element={<ProtectedRoute ROLE={"CLIENT"} />}>
             <Route path="/client" element={<ClientPage />} />
           </Route>
