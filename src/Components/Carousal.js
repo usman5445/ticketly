@@ -87,7 +87,7 @@ function Carousal({ items }) {
           </span>
         </div>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[1].language}
+          {visibleItems[1]?.language}
         </button>
       </div>
       <div
@@ -122,7 +122,7 @@ function Carousal({ items }) {
           <HiPlay />
         </a>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[1].language}
+          {visibleItems[1]?.language}
         </button>
       </div>
       <div
@@ -149,7 +149,7 @@ function Carousal({ items }) {
           </span>
         </div>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[2].language}
+          {visibleItems[2]?.language}
         </button>
       </div>
 
