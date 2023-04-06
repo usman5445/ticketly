@@ -38,7 +38,7 @@ export const LoginPage = () => {
         setIsLoading(false);
         setAlertData({ isVisible: true, massage: "Login Sucessfull!" });
         setTimeout(() => {
-          navigate(`/${resp.data.userTypes.toLowerCase()}`);
+          navigate(`/${resp.data.userType.toLowerCase()}`);
         }, 2000);
       })
       .catch((err) => {
