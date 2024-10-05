@@ -3,12 +3,20 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 //get all movies body{}
 export async function getAllMovies() {
-  return await axios.get(`${BACKEND_URL}/mba/api/v1/movies`);
+  return await axios.get(`${BACKEND_URL}/mba/api/v1/movies`,{
+    headers: {
+      "x-access-token": JSON.parse(localStorage.getItem("user")).accessToken,
+    },
+  });
 }
 
 //get sigle movie body{name}
 export async function getMovie(name) {
-  return await axios.get(`${BACKEND_URL}/mba/api/v1/movies/${name}`);
+  return await axios.get(`${BACKEND_URL}/mba/api/v1/movies/${name}`,{
+    headers: {
+      "x-access-token": JSON.parse(localStorage.getItem("user")).accessToken,
+    },
+  });
 }
 
 //ceate new movie body{id,name,description,casts,director,trailerUrl,posterUrl,language,releaseDate,releaseSatus}
