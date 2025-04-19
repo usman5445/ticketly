@@ -65,7 +65,7 @@ function Carousal({ items }) {
 
       <div
         ref={firstCardRef}
-        style={{ backgroundImage: `url("${visibleItems[0]?.posterUrl}")` }}
+        style={{ backgroundImage: `url("${visibleItems[0]?.posterUrls[0]}")` }}
         className=" relative mx-1 h-40 w-56 flex-shrink-0 overflow-hidden rounded-3xl bg-white bg-contain bg-center  shadow-xl brightness-50  transition  delay-100 dark:bg-inactive-dark md:mx-4 md:h-72 md:w-[30rem]"
       >
         <div className="absolute bottom-0 flex h-full w-full flex-col justify-end bg-gradient-to-t from-black p-4">
@@ -81,18 +81,18 @@ function Carousal({ items }) {
               </span>
             ))}
           </span>
-          <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
+          {/* <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
             Directed By :
             <span className="font-normal"> {visibleItems[0]?.director}</span>
-          </span>
+          </span> */}
         </div>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[1]?.language}
+          {visibleItems[1]?.languages?.join(", ")}
         </button>
       </div>
       <div
         ref={secondCardRef}
-        style={{ backgroundImage: `url("${visibleItems[1]?.posterUrl}")` }}
+        style={{ backgroundImage: `url("${visibleItems[1]?.posterUrls[0]}")` }}
         className="group relative z-10 mx-1 h-40 w-56 flex-shrink-0 scale-110 overflow-hidden rounded-3xl bg-white bg-contain bg-center    shadow-xl  transition-all delay-100 dark:bg-active-dark md:mx-4 md:h-72 md:w-[30rem]"
       >
         <div className="absolute bottom-0 flex h-3/4 w-full flex-col justify-end bg-gradient-to-t from-black p-4">
@@ -108,26 +108,26 @@ function Carousal({ items }) {
               </span>
             ))}
           </span>
-          <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
+          {/* <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
             Directed By :
             <span className="font-normal"> {visibleItems[1]?.director}</span>
-          </span>
+          </span> */}
         </div>
         <a
           className="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 transform text-5xl text-accent-red drop-shadow-[0_0_10px_rgb(216,31,38)] transition group-hover:scale-100 lg:scale-0"
-          href={visibleItems[1]?.trailerUrl}
+          href={visibleItems[1]?.trailerUrls[0]}
           target="_blank"
           rel="noopener noreferrer"
         >
           <HiPlay />
         </a>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[1]?.language}
+          {visibleItems[1]?.languages?.join(", ")}
         </button>
       </div>
       <div
         ref={thirdCardRef}
-        style={{ backgroundImage: `url("${visibleItems[2]?.posterUrl}")` }}
+        style={{ backgroundImage: `url("${visibleItems[2]?.posterUrls[0]}")` }}
         className="relative mx-1 h-40 w-56 flex-shrink-0 overflow-hidden rounded-3xl bg-white bg-contain   bg-center shadow-xl brightness-50  transition  delay-100 dark:bg-inactive-dark md:mx-4 md:h-72 md:w-[30rem]"
       >
         <div className="absolute bottom-0 flex h-full w-full flex-col justify-end bg-gradient-to-t from-black p-4">
@@ -143,13 +143,13 @@ function Carousal({ items }) {
               </span>
             ))}
           </span>
-          <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
+          {/* <span className="text-[0.5rem] font-semibold leading-none text-primary-white md:text-base">
             Directed By :
             <span className="font-normal"> {visibleItems[2]?.director}</span>
-          </span>
+          </span> */}
         </div>
         <button className="absolute right-2 top-2 rounded-xl bg-accent-red p-1 font-montserrat-bold text-sm text-primary-white shadow-md shadow-black md:text-base">
-          {visibleItems[2]?.language}
+          {visibleItems[2]?.languages?.join(", ")}
         </button>
       </div>
 

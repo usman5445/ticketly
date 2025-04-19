@@ -9,6 +9,7 @@ function Navbar() {
   const [isLoading, setIsLoading] = useState(false);
   const drawerRef = useRef();
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user")) || {};
   function drawerHandler() {
     drawerRef.current.classList.toggle("hidden");
   }
@@ -34,10 +35,10 @@ function Navbar() {
         <ThemeBtn classes={"mx-4 "} />
         <div className="mx-3 ">
           <h4 className="text-2xl font-semibold text-primary-gray dark:text-primary-white">
-            Usman
+            {user?.name}
           </h4>
           <h5 className=" text-end  font-montserrat-italic text-xs font-thin">
-            usman5445
+            @{user?.userId}
           </h5>
         </div>
         <FaUserCircle className="rounded-full text-4xl text-primary-gray outline outline-dashed outline-4 outline-offset-2 outline-secondary-gray" />
